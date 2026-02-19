@@ -1,0 +1,95 @@
+---
+// src/components/common/Header.astro
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.png'; // Your Main Cortex Logo
+
+// Import Product Logos for the Dropdown
+// (Make sure these exist in src/assets/images/, or comment them out if you don't have them yet)
+import logoOyotimes from '../../assets/images/logo-oyotimes.png';
+import logoUnicore from '../../assets/images/logo-unicore.png';
+import logoUrbis from '../../assets/images/logo-urbis.png';
+---
+
+<header class="w-full border-b border-white/5 bg-cortex-navy/90 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    
+    <a href="/" class="group flex items-center gap-3 relative z-50">
+      <div class="relative w-8 h-8 flex items-center justify-center">
+        <Image 
+          src={logo} 
+          alt="Cortex Logo" 
+          class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110" 
+        />
+      </div>
+      <span class="text-xl font-space font-bold tracking-widest text-white">
+        CORTEX
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+      
+      <div class="group relative h-20 flex items-center cursor-pointer">
+        <button class="flex items-center gap-1 hover:text-white transition-colors group-hover:text-cortex-blue">
+          Ventures
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+
+        <div class="absolute top-[90%] left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out transform translate-y-2 group-hover:translate-y-0 w-[400px]">
+          <div class="bg-[#0B132B] border border-white/10 rounded-xl shadow-2xl overflow-hidden p-2 backdrop-blur-xl relative">
+            
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-cortex-blue"></div>
+
+            <div class="flex flex-col gap-1">
+              <a href="https://oyotimes.com" target="_blank" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+                <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
+                   <span class="font-bold text-red-500">O</span>
+                </div>
+                <div>
+                  <div class="text-white font-bold flex items-center gap-2">
+                    OyoTimes 
+                    <span class="text-[10px] text-red-400 bg-red-500/10 px-1.5 rounded border border-red-500/20">LIVE</span>
+                  </div>
+                  <p class="text-xs text-gray-500 leading-snug mt-1">Digital media & intelligence platform.</p>
+                </div>
+              </a>
+
+              <a href="#" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+                <div class="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center border border-yellow-500/20">
+                   <span class="font-bold text-yellow-500">U</span>
+                </div>
+                <div>
+                  <div class="text-white font-bold flex items-center gap-2">
+                    UniCore
+                    <span class="text-[10px] text-yellow-400 bg-yellow-500/10 px-1.5 rounded border border-yellow-500/20">DEV</span>
+                  </div>
+                  <p class="text-xs text-gray-500 leading-snug mt-1">University ERP infrastructure.</p>
+                </div>
+              </a>
+
+              <a href="#" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+                <div class="w-10 h-10 bg-cortex-blue/10 rounded-lg flex items-center justify-center border border-cortex-blue/20">
+                   <span class="font-bold text-cortex-blue">R</span>
+                </div>
+                <div>
+                  <div class="text-white font-bold flex items-center gap-2">
+                    Urbis
+                    <span class="text-[10px] text-cortex-blue bg-cortex-blue/10 px-1.5 rounded border border-cortex-blue/20">BETA</span>
+                  </div>
+                  <p class="text-xs text-gray-500 leading-snug mt-1">PropTech & Land marketplace.</p>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <a href="#manifesto" class="hover:text-cortex-blue transition-colors">Manifesto</a>
+      <a href="#contact" class="hover:text-cortex-blue transition-colors">Contact</a>
+    </nav>
+
+    <a href="mailto:partners@cortex.com" class="hidden md:block px-5 py-2 bg-cortex-blue text-white text-sm font-bold rounded hover:bg-blue-600 transition-all shadow-[0_0_15px_rgba(58,134,255,0.3)]">
+      Partner Access
+    </a>
+  </div>
+</header>
