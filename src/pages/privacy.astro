@@ -1,0 +1,97 @@
+---
+// src/pages/privacy.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+---
+
+<MainLayout title="CORTEX | Privacy Policy">
+  <div class="bg-[#050914] min-h-screen text-gray-300 selection:bg-[#3A86FF] selection:text-white font-sans">
+    <Header />
+
+    <main class="pt-32 pb-16 px-6 border-b border-white/5 bg-[#0B132B]">
+      <div class="max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#050914] border border-white/10 text-xs font-mono text-[#3A86FF] mb-6 uppercase tracking-widest">
+            Data Governance
+        </div>
+        <h1 class="text-4xl md:text-5xl font-space font-bold text-white mb-4">Privacy Policy</h1>
+        <p class="text-gray-400 font-mono text-sm">Last Updated: February 2026</p>
+      </div>
+    </main>
+
+    <section class="py-16 px-6">
+      <div class="max-w-4xl mx-auto space-y-12 text-gray-400 leading-relaxed">
+        
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">1. Our Commitment to Data Security</h2>
+            <p>
+                At <strong>Cortex Guild Ltd.</strong>, we architect digital systems for civic solutions. Because our platforms handle sensitive institutional data, we treat privacy as a foundational architectural requirement, not an afterthought. This Privacy Policy details how we collect, use, and protect your information across our ecosystem.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">2. Information We Collect</h2>
+            <p class="mb-4">We collect information based on the specific Cortex platform you interact with:</p>
+            <ul class="list-disc pl-6 space-y-4">
+                <li>
+                    <strong class="text-white">Account & Identity Data:</strong> Name, email address, phone number, and encrypted passwords. For <strong>Urbis</strong> users, this includes strict KYC documents (Government ID, facial recognition data) required for property transactions.
+                </li>
+                <li>
+                    <strong class="text-white">Institutional Data (UniCore):</strong> Academic records, bursary payment histories, and enrollment statuses. <em>Note: Cortex acts as a data processor for UniCore; the respective educational institution remains the data controller.</em>
+                </li>
+                <li>
+                    <strong class="text-white">Transactional Data:</strong> Payment details processed via highly secure, PCI-compliant third-party gateways (e.g., Flutterwave) for event tickets (OyoTimes) or property fees (Urbis).
+                </li>
+                <li>
+                    <strong class="text-white">Telemetry & Usage Data:</strong> Anonymized IP addresses, device types, and interaction metrics to ensure the stability of our serverless architecture.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">3. How We Use Your Information</h2>
+            <p class="mb-4">Your data is utilized strictly for the operation and security of the civic grid:</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>To authenticate users and provide secure Single Sign-On (SSO) capabilities where applicable.</li>
+                <li>To process financial transactions and prevent fraud within the real estate and academic sectors.</li>
+                <li>To deliver hyper-local event ticketing and intelligence.</li>
+                <li>To comply with federal and state regulatory mandates in Nigeria.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">4. Data Storage and Infrastructure</h2>
+            <p>
+                Cortex utilizes centralized, bank-grade cloud infrastructure (including PostgreSQL databases via Supabase). Data is encrypted both in transit (via SSL/TLS) and at rest. We employ strict Role-Based Access Control (RBAC) to ensure that only authorized personnel or institutional administrators can access sensitive records.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">5. Sharing of Information</h2>
+            <p>
+                We do not sell your personal data to third parties. We may share information only under the following circumstances:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+                <li>With authorized third-party vendors (e.g., payment processors, SMS gateways) necessary to provide our services.</li>
+                <li>With institutional partners (e.g., Universities using UniCore) as dictated by their administrative requirements.</li>
+                <li>When compelled by lawful subpoena or governmental request within the jurisdiction of the Federal Republic of Nigeria.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">6. Your Rights</h2>
+            <p>
+                Under the Nigeria Data Protection Act (NDPA), you have the right to request access to, correction of, or deletion of your personal data. To exercise these rights, please submit a formal request via our communications portal.
+            </p>
+        </div>
+
+        <div class="pt-8 border-t border-white/5">
+            <p class="text-sm font-mono">For privacy & data governance inquiries, contact: <a href="mailto:hello@cortexguild.com" class="text-[#3A86FF] hover:underline">hello@cortexguild.com</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</MainLayout>

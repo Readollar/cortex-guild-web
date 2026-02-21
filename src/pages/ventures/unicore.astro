@@ -1,0 +1,93 @@
+---
+// src/pages/ventures/unicore.astro
+import MainLayout from '../../layouts/MainLayout.astro';
+import Header from '../../components/common/Header.astro';
+import Footer from '../../components/common/Footer.astro';
+---
+
+<MainLayout title="CORTEX | UniCore Infrastructure">
+  <div class="bg-cortex-navy min-h-screen text-cortex-light selection:bg-yellow-500 selection:text-white font-sans">
+    <Header />
+
+    <main class="relative pt-32 pb-20 px-6 overflow-hidden border-b border-white/5">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        
+        <div class="inline-flex items-center justify-center gap-3 mb-8">
+            <span class="text-xs font-mono text-gray-500 uppercase tracking-widest">Cortex Subsidiary</span>
+            <span class="w-8 h-px bg-white/20"></span>
+            <span class="text-xs font-mono text-yellow-500 bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/20">NODE 02: IN DEVELOPMENT</span>
+        </div>
+
+        <h1 class="text-6xl md:text-8xl font-space font-bold tracking-tighter text-white mb-6">
+          UNICORE
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          Next-generation ERP infrastructure designed specifically for higher education institutions.
+        </p>
+      </div>
+    </main>
+
+    <section class="py-24 px-6 bg-[#050914]">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-3xl font-space font-bold text-white mb-4">The Institutional Engine.</h3>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Legacy university software is fragmented, expensive, and difficult to maintain. UniCore is a unified system that brings student management, faculty grading, and bursary operations under one highly secure, easily auditable roof.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-[#0B132B] rounded-xl border border-white/5">
+                        <div class="text-yellow-500 font-bold text-2xl mb-1">Centralized</div>
+                        <div class="text-xs text-gray-500 uppercase font-mono tracking-widest">Data Architecture</div>
+                    </div>
+                    <div class="p-6 bg-[#0B132B] rounded-xl border border-white/5">
+                        <div class="text-yellow-500 font-bold text-2xl mb-1">Role-Based</div>
+                        <div class="text-xs text-gray-500 uppercase font-mono tracking-widest">Access Control</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-mono text-sm tracking-widest uppercase">Technical Stack</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-sm text-gray-300">Next.js / React</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-sm text-gray-300">PostgreSQL Relational DB</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-sm text-gray-300">Enterprise Authentication</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-sm text-gray-300">Automated Audit Logging</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative h-[600px] rounded-2xl bg-gradient-to-br from-[#0B132B] to-[#050914] border border-white/10 overflow-hidden shadow-2xl flex items-center justify-center p-8">
+                <div class="w-full h-full border border-white/5 bg-black/50 rounded-lg flex flex-col backdrop-blur-md overflow-hidden">
+                    <div class="h-10 border-b border-white/5 flex items-center px-4 gap-2 bg-white/5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <div class="ml-4 text-[10px] font-mono text-gray-500">unicore.system / admin-dashboard</div>
+                    </div>
+                    <div class="p-8 flex-1 flex items-center justify-center">
+                        <div class="text-center">
+                            <span class="text-yellow-500/50 font-mono text-sm tracking-widest">[ UNICORE_ERP_RENDER ]</span>
+                            <p class="text-gray-600 text-xs mt-2">Bursary & Student Management Interface</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-[#080e21] text-center">
+        <h2 class="text-3xl font-space font-bold text-white mb-6">Deploying Soon</h2>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">UniCore is currently in active development. We are actively seeking pilot partnerships with forward-thinking institutions in Oyo State.</p>
+        <a href="mailto:partners@cortexguild.com" class="inline-block px-8 py-4 bg-yellow-500 text-[#0B132B] font-bold rounded-lg hover:bg-yellow-400 transition-colors">
+            Request Pilot Access
+        </a>
+    </section>
+
+    <Footer />
+  </div>
+</MainLayout>

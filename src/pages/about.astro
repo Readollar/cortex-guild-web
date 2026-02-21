@@ -1,0 +1,128 @@
+---
+// src/pages/about.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+---
+
+<MainLayout title="CORTEX | The Company">
+  <div class="bg-cortex-navy min-h-screen text-cortex-light selection:bg-[#3A86FF] selection:text-white font-sans">
+    <Header />
+
+    <main class="relative pt-32 pb-20 px-6 overflow-hidden border-b border-white/5">
+      <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-cortex-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none opacity-50"></div>
+      
+      <div class="max-w-5xl mx-auto relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B132B] border border-white/10 text-xs font-mono text-gray-400 mb-8 uppercase tracking-widest">
+            Corporate Overview
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-space font-bold tracking-tighter text-white mb-6">
+          Architecting the <br/>
+          <span class="text-[#3A86FF]">Civic Economy.</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          Cortex is a civic technology venture studio. We do not build disposable applications; we engineer the foundational digital infrastructure required for emerging African cities to scale securely.
+        </p>
+      </div>
+    </main>
+
+    <section class="py-24 px-6 bg-[#050914] relative z-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="space-y-8">
+                <h2 class="text-3xl font-space font-bold text-white leading-tight">The Venture Studio Advantage.</h2>
+                <div class="space-y-6 text-lg text-gray-400 leading-relaxed font-light">
+                    <p>
+                        Most technology companies focus on a single vertical. They build one app for real estate, or one app for education. In emerging markets like Oyo State, this creates a deeply fragmented ecosystem where systems cannot communicate.
+                    </p>
+                    <p>
+                        <strong class="text-white font-medium">Cortex operates differently.</strong> As a venture studio, we build multiple verticals—Media (OyoTimes), EdTech (UniCore), and PropTech (Urbis)—on top of a single, unified architectural foundation. 
+                    </p>
+                    <p>
+                        This allows us to deploy enterprise-grade platforms with unprecedented speed, sharing security protocols, authentication systems, and design tokens across the entire civic grid.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid gap-6">
+                <div class="p-8 bg-[#0B132B] rounded-2xl border border-white/5 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="text-xs font-mono text-red-400 mb-2 uppercase tracking-widest">Phase 01: Information</div>
+                    <h4 class="text-white font-bold text-xl mb-2">Media & Intelligence</h4>
+                    <p class="text-sm text-gray-400">Capturing local attention and event data through OyoTimes to establish initial civic trust and user networks.</p>
+                </div>
+                <div class="p-8 bg-[#0B132B] rounded-2xl border border-white/5 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-yellow-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="text-xs font-mono text-yellow-400 mb-2 uppercase tracking-widest">Phase 02: Institutions</div>
+                    <h4 class="text-white font-bold text-xl mb-2">Educational ERP</h4>
+                    <p class="text-sm text-gray-400">Digitizing massive, complex university workflows via UniCore, proving enterprise stability and data governance.</p>
+                </div>
+                <div class="p-8 bg-[#0B132B] rounded-2xl border border-white/5 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#3A86FF] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="text-xs font-mono text-[#3A86FF] mb-2 uppercase tracking-widest">Phase 03: Assets</div>
+                    <h4 class="text-white font-bold text-xl mb-2">PropTech & Real Estate</h4>
+                    <p class="text-sm text-gray-400">Deploying Urbis to map, verify, and transact physical land assets natively on mobile devices.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-[#080e21]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-space font-bold text-white mb-4">Leadership & The Guild</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">We are a collective of architects, engineers, and civic designers committed to building long-term institutional value.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-[#0B132B] border border-white/10 rounded-2xl p-8 text-center hover:border-[#3A86FF]/30 transition-colors">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#3A86FF]/50 mb-6 p-1">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img 
+                                src="https://res.cloudinary.com/urbis-grid/image/upload/v1771684030/Professional_Photo.jpg_imdx4q.jpg" 
+                                alt="Ridwan Awujoola" 
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                            />
+                        </div>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-1">Ridwan Awujoola</h3>
+                    <div class="text-[#3A86FF] text-xs font-mono tracking-widest uppercase mb-4">Founder & Chief Architect</div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Civic Technologist and Full-Stack Engineer. Leading the architectural vision and technical deployment across all Cortex platforms.
+                    </p>
+                </div>
+
+                <div class="bg-[#050914] border border-white/5 border-dashed rounded-2xl p-8 text-center flex flex-col items-center justify-center opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="text-gray-500 font-bold text-lg mb-1">Engineering Node</h3>
+                    <div class="text-gray-600 text-xs font-mono tracking-widest uppercase">Expanding Q3</div>
+                </div>
+
+                <div class="bg-[#050914] border border-white/5 border-dashed rounded-2xl p-8 text-center flex flex-col items-center justify-center opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                    </div>
+                    <h3 class="text-gray-500 font-bold text-lg mb-1">Policy & Security Node</h3>
+                    <div class="text-gray-600 text-xs font-mono tracking-widest uppercase">Expanding Q4</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-[#050914] text-center">
+        <h2 class="text-3xl font-space font-bold text-white mb-6">Join the Ecosystem</h2>
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#3A86FF] text-[#0B132B] font-bold rounded-lg hover:bg-white transition-colors">
+            Contact the Guild
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+    </section>
+
+    <Footer />
+  </div>
+</MainLayout>

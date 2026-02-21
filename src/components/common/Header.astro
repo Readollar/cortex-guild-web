@@ -2,15 +2,9 @@
 // src/components/common/Header.astro
 import { Image } from 'astro:assets';
 import logo from '../../assets/logo.png'; // Your Main Cortex Logo
-
-// Import Product Logos for the Dropdown
-// (Make sure these exist in src/assets/images/, or comment them out if you don't have them yet)
-import logoOyotimes from '../../assets/images/logo-oyotimes.png';
-import logoUnicore from '../../assets/images/logo-unicore.png';
-import logoUrbis from '../../assets/images/logo-urbis.png';
 ---
 
-<header class="w-full border-b border-white/5 bg-cortex-navy/90 backdrop-blur-md sticky top-0 z-50">
+<header class="w-full border-b border-white/5 bg-[#050914]/90 backdrop-blur-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     
     <a href="/" class="group flex items-center gap-3 relative z-50">
@@ -29,7 +23,7 @@ import logoUrbis from '../../assets/images/logo-urbis.png';
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
       
       <div class="group relative h-20 flex items-center cursor-pointer">
-        <button class="flex items-center gap-1 hover:text-white transition-colors group-hover:text-cortex-blue">
+        <button class="flex items-center gap-1 hover:text-white transition-colors group-hover:text-[#3A86FF]">
           Ventures
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
         </button>
@@ -37,10 +31,10 @@ import logoUrbis from '../../assets/images/logo-urbis.png';
         <div class="absolute top-[90%] left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out transform translate-y-2 group-hover:translate-y-0 w-[400px]">
           <div class="bg-[#0B132B] border border-white/10 rounded-xl shadow-2xl overflow-hidden p-2 backdrop-blur-xl relative">
             
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-cortex-blue"></div>
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-[#3A86FF]"></div>
 
             <div class="flex flex-col gap-1">
-              <a href="https://oyotimes.com" target="_blank" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+              <a href="/ventures/oyotimes" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
                 <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
                    <span class="font-bold text-red-500">O</span>
                 </div>
@@ -53,7 +47,7 @@ import logoUrbis from '../../assets/images/logo-urbis.png';
                 </div>
               </a>
 
-              <a href="#" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+              <a href="/ventures/unicore" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
                 <div class="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center border border-yellow-500/20">
                    <span class="font-bold text-yellow-500">U</span>
                 </div>
@@ -66,14 +60,14 @@ import logoUrbis from '../../assets/images/logo-urbis.png';
                 </div>
               </a>
 
-              <a href="#" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
-                <div class="w-10 h-10 bg-cortex-blue/10 rounded-lg flex items-center justify-center border border-cortex-blue/20">
-                   <span class="font-bold text-cortex-blue">R</span>
+              <a href="/ventures/urbis" class="flex items-start gap-4 p-4 rounded-lg hover:bg-white/5 transition-colors group/item">
+                <div class="w-10 h-10 bg-[#3A86FF]/10 rounded-lg flex items-center justify-center border border-[#3A86FF]/20">
+                   <span class="font-bold text-[#3A86FF]">U</span>
                 </div>
                 <div>
                   <div class="text-white font-bold flex items-center gap-2">
                     Urbis
-                    <span class="text-[10px] text-cortex-blue bg-cortex-blue/10 px-1.5 rounded border border-cortex-blue/20">BETA</span>
+                    <span class="text-[10px] text-[#3A86FF] bg-[#3A86FF]/10 px-1.5 rounded border border-[#3A86FF]/20">BETA</span>
                   </div>
                   <p class="text-xs text-gray-500 leading-snug mt-1">PropTech & Land marketplace.</p>
                 </div>
@@ -84,12 +78,85 @@ import logoUrbis from '../../assets/images/logo-urbis.png';
         </div>
       </div>
 
-      <a href="#manifesto" class="hover:text-cortex-blue transition-colors">Manifesto</a>
-      <a href="#contact" class="hover:text-cortex-blue transition-colors">Contact</a>
+      <a href="/about" class="hover:text-[#3A86FF] transition-colors">Company</a>
+      <a href="/contact" class="hover:text-[#3A86FF] transition-colors">Contact</a>
     </nav>
 
-    <a href="mailto:partners@cortex.com" class="hidden md:block px-5 py-2 bg-cortex-blue text-white text-sm font-bold rounded hover:bg-blue-600 transition-all shadow-[0_0_15px_rgba(58,134,255,0.3)]">
+    <a href="/contact" class="hidden md:block px-5 py-2 bg-[#3A86FF] text-[#0B132B] text-sm font-bold rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(58,134,255,0.3)]">
       Partner Access
     </a>
+
+    <button id="mobile-menu-open" class="md:hidden text-white p-2 hover:text-[#3A86FF] transition-colors z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0B132B]/95 backdrop-blur-2xl z-[100] translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+    
+    <div class="px-6 h-20 flex items-center justify-between border-b border-white/5">
+        <span class="text-xl font-space font-bold tracking-widest text-white">MENU</span>
+        <button id="mobile-menu-close" class="text-white p-2 hover:text-[#3A86FF] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+    </div>
+
+    <div class="p-6 flex flex-col gap-8 flex-1 overflow-y-auto">
+        
+        <div>
+            <div class="text-xs font-mono text-gray-500 mb-4 tracking-widest">ECOSYSTEM</div>
+            <div class="flex flex-col gap-4">
+                <a href="/ventures/oyotimes" class="text-2xl font-bold text-white hover:text-red-500 transition-colors flex items-center justify-between">
+                    OyoTimes <span class="text-[10px] text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20 font-mono">LIVE</span>
+                </a>
+                <a href="/ventures/unicore" class="text-2xl font-bold text-white hover:text-yellow-500 transition-colors flex items-center justify-between">
+                    UniCore <span class="text-[10px] text-yellow-400 bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/20 font-mono">DEV</span>
+                </a>
+                <a href="/ventures/urbis" class="text-2xl font-bold text-white hover:text-[#3A86FF] transition-colors flex items-center justify-between">
+                    Urbis <span class="text-[10px] text-[#3A86FF] bg-[#3A86FF]/10 px-2 py-1 rounded border border-[#3A86FF]/20 font-mono">BETA</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full h-px bg-white/5"></div>
+
+        <div class="flex flex-col gap-6">
+            <a href="/about" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Company</a>
+            <a href="/contact" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Contact</a>
+        </div>
+
+        <div class="mt-auto pt-8">
+            <a href="/contact" class="block w-full text-center py-4 bg-[#3A86FF] text-[#0B132B] font-bold rounded-lg hover:bg-white transition-colors">
+                Partner Access
+            </a>
+        </div>
+    </div>
   </div>
 </header>
+
+<script>
+  const openBtn = document.getElementById('mobile-menu-open');
+  const closeBtn = document.getElementById('mobile-menu-close');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  
+  // Also close the menu if a user clicks a link inside it
+  const mobileLinks = overlay?.querySelectorAll('a');
+
+  function openMenu() {
+      overlay?.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  function closeMenu() {
+      overlay?.classList.add('translate-x-full');
+      document.body.style.overflow = 'auto'; // Re-enable background scrolling
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+  if (mobileLinks) {
+      mobileLinks.forEach(link => {
+          link.addEventListener('click', closeMenu);
+      });
+  }
+</script>

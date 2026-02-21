@@ -2,15 +2,87 @@
 // src/components/common/Footer.astro
 const currentYear = new Date().getFullYear();
 ---
-<footer class="bg-[#050914] border-t border-white/5 py-12 px-6 text-sm">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500">
+
+<footer class="bg-[#050914] border-t border-white/5 pt-16 pb-8 px-6 text-sm">
+  <div class="max-w-7xl mx-auto">
     
-    <div class="flex items-center gap-2 mb-4 md:mb-0">
-      <span class="font-space font-bold text-gray-300 tracking-widest">CORTEX</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-3 mb-6">
+          <div class="relative w-6 h-6 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#3A86FF]">
+              <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" />
+            </svg>
+          </div>
+          <span class="text-lg font-space font-bold tracking-widest text-white">CORTEX</span>
+        </a>
+        <p class="text-gray-400 text-xs leading-relaxed font-mono uppercase tracking-widest">
+          Digital Systems. <br/> Civic Solutions.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 font-space tracking-wider text-xs uppercase text-gray-500">The Ecosystem</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li>
+            <a href="/ventures/oyotimes" class="hover:text-[#3A86FF] transition-colors flex items-center gap-2 group">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500 group-hover:scale-150 transition-transform"></span>
+              OyoTimes
+            </a>
+          </li>
+          <li>
+            <a href="/ventures/unicore" class="hover:text-[#3A86FF] transition-colors flex items-center gap-2 group">
+              <span class="w-1.5 h-1.5 rounded-full bg-yellow-500 group-hover:scale-150 transition-transform"></span>
+              UniCore
+            </a>
+          </li>
+          <li>
+            <a href="/ventures/urbis" class="hover:text-[#3A86FF] transition-colors flex items-center gap-2 group">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#3A86FF] group-hover:scale-150 transition-transform"></span>
+              Urbis
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 font-space tracking-wider text-xs uppercase text-gray-500">Corporate</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li><a href="/about" class="hover:text-[#3A86FF] transition-colors">The Company</a></li>
+          <li><a href="/contact" class="hover:text-[#3A86FF] transition-colors">Partner Access</a></li>
+          <li><a href="#" class="hover:text-[#3A86FF] transition-colors">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 font-space tracking-wider text-xs uppercase text-gray-500">Headquarters</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 text-[#3A86FF] shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Oyo State, Nigeria <br/> <span class="text-xs text-gray-500 font-mono mt-1 block">Global Operations</span></span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3A86FF] shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:hello@cortexguild.com" class="hover:text-white transition-colors">hello@cortexguild.com</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="font-mono text-xs">
-      &copy; {currentYear} Cortex Guild Ltd. All Rights Reserved.
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
+      
+      <div class="font-mono text-xs text-gray-500">
+        &copy; {currentYear} Cortex Guild Ltd. All Rights Reserved.
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-500 font-medium">
+        <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="/contact" class="hover:text-white transition-colors">Security Disclosure</a>
+      </div>
+      
     </div>
     
   </div>

@@ -3,14 +3,6 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
-import { Image } from 'astro:assets';
-
-// --- IMAGE IMPORTS ---
-// ⚠️ IMPORTANT: These must exist in 'src/assets/images/' or the build will fail.
-// If you don't have them yet, comment out the import lines below.
-// import heroAbstract from '../assets/images/hero-abstract.png';
-// import ridwanHeadshot from '../assets/images/ridwan-headshot.png';
-// import partner1 from '../assets/images/partner-1.png'; 
 ---
 
 <MainLayout title="CORTEX | Digital Systems, Civic Solutions">
@@ -18,8 +10,7 @@ import { Image } from 'astro:assets';
   <div class="bg-cortex-navy min-h-screen text-cortex-light selection:bg-cortex-blue selection:text-white font-sans">
     <Header />
 
-    <main class="relative pt-32 pb-40 px-6 overflow-hidden border-b border-white/5">
-      
+    <main class="relative pt-32 pb-24 px-6 overflow-hidden">
       <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-cortex-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none opacity-50"></div>
       
       <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
@@ -34,173 +25,157 @@ import { Image } from 'astro:assets';
             We architect the digital infrastructure that powers the next generation of African cities. Bridging the gap between rapid innovation and institutional stability.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-start gap-4">
-            <a href="#ventures" class="px-8 py-4 bg-white text-[#0B132B] font-bold rounded-lg hover:bg-gray-100 transition-colors min-w-[180px] text-center">
-              Explore Ventures
+          <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a href="#ventures" class="w-full sm:w-auto px-8 py-4 bg-white text-[#0B132B] font-bold rounded-lg hover:bg-gray-100 transition-colors min-w-[180px] text-center">
+              Explore the Ecosystem
             </a>
-            <a href="#manifesto" class="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-colors min-w-[180px] text-center">
-               The Manifesto
+            <a href="mailto:partners@cortexguild.com" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-colors min-w-[180px] text-center">
+               Partner With Us
             </a>
           </div>
         </div>
 
         <div class="relative hidden lg:block h-[600px] w-full">
-           <div class="absolute inset-0 bg-gradient-to-tr from-cortex-blue/10 to-transparent rounded-3xl border border-white/5 flex items-center justify-center overflow-hidden backdrop-blur-sm">
-              <div class="text-center">
-                <span class="block text-[#3A86FF] font-mono text-xs mb-2 tracking-widest">[ VISUAL_SLOT: 3D_ABSTRACT_NETWORK ]</span>
-                <span class="text-white/20 text-xs">Recommended: Abstract geometric nodes or city grid</span>
-              </div>
+           <div class="absolute inset-0 bg-[#0B132B] rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
+                alt="Digital Infrastructure Network" 
+                class="object-cover w-full h-full opacity-60 mix-blend-screen hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent"></div>
            </div>
         </div>
 
       </div>
     </main>
 
+    <section class="py-12 px-6 border-y border-white/5 bg-[#050914]/50 backdrop-blur-sm relative z-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <p class="font-mono text-xs text-gray-500 uppercase tracking-[0.2em] whitespace-nowrap">
+                Backed by & Trusted by
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-end items-center gap-6 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 w-full mt-4 md:mt-0">
+                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INVESTOR / PARTNER 01 ]</span>
+                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INVESTOR / PARTNER 02 ]</span>
+                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INSTITUTIONAL CLIENT ]</span>
+            </div>
+        </div>
+    </section>
+
     <section id="ventures" class="py-32 px-6 bg-[#080e21]">
       <div class="max-w-7xl mx-auto">
-        <div class="mb-20 md:flex items-end justify-between border-b border-white/10 pb-8">
+        <div class="mb-20 md:flex items-end justify-between pb-8">
           <div class="max-w-2xl">
-            <h2 class="text-4xl font-space font-bold text-white mb-4">The Infrastructure.</h2>
-            <p class="text-gray-400 text-lg">We build verticals. Each Cortex product addresses a critical gap in the civic economy.</p>
+            <h2 class="text-4xl font-space font-bold text-white mb-4">The Infrastructure Verticals.</h2>
+            <p class="text-gray-400 text-lg">We do not build isolated applications. Cortex deploys interconnected platforms that digitize the core pillars of the civic economy.</p>
           </div>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-3 gap-6">
           
-          <article class="group relative bg-cortex-steel border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/30 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+          <a href="/ventures/oyotimes" class="group relative bg-[#0B132B] border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden block">
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="font-space text-6xl font-bold text-white">01</span>
+            </div>
             <div class="relative z-10">
-                <div class="h-14 w-14 bg-red-500/10 rounded-xl flex items-center justify-center mb-8 border border-red-500/20 group-hover:bg-red-500/20 transition-colors">
-                  <span class="font-space font-bold text-red-500 text-2xl">O</span>
-                </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-2">OYOTIMES</h3>
+                <div class="h-12 w-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-8 border border-red-500/20 text-red-500 font-bold">O</div>
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-[#3A86FF] transition-colors">OYOTIMES</h3>
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-xs font-mono text-red-400 uppercase tracking-wider">Media & Intelligence</span>
-                    <span class="h-px w-8 bg-white/10"></span>
-                    <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/20">LIVE</span>
                 </div>
-                
-                <p class="text-gray-400 leading-relaxed mb-8 border-l-2 border-white/10 pl-4">
-                  The premier digital media platform for Oyo State. Delivering hyper-local journalism, economic intelligence, and event data.
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                  The premier digital media platform for Oyo State. Delivering hyper-local journalism, economic intelligence, and high-volume event data.
                 </p>
-
-                <a href="https://oyotimes.com" target="_blank" class="inline-flex items-center text-sm font-bold text-white hover:text-red-400 transition-colors">
-                  Access Platform <span class="ml-2">→</span>
-                </a>
+                <span class="text-[#3A86FF] text-sm font-bold flex items-center gap-2">Explore Architecture <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </div>
-          </article>
+          </a>
 
-          <article class="group relative bg-cortex-steel border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/30 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+          <a href="/ventures/unicore" class="group relative bg-[#0B132B] border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden block">
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="font-space text-6xl font-bold text-white">02</span>
+            </div>
             <div class="relative z-10">
-                <div class="h-14 w-14 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-8 border border-yellow-500/20 group-hover:bg-yellow-500/20 transition-colors">
-                  <span class="font-space font-bold text-yellow-500 text-2xl">U</span>
-                </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-2">UNICORE</h3>
+                <div class="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center mb-8 border border-yellow-500/20 text-yellow-500 font-bold">U</div>
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-[#3A86FF] transition-colors">UNICORE</h3>
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-xs font-mono text-yellow-400 uppercase tracking-wider">EdTech Systems</span>
-                    <span class="h-px w-8 bg-white/10"></span>
-                    <span class="text-[10px] bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded border border-yellow-500/20">DEV</span>
                 </div>
-                
-                <p class="text-gray-400 leading-relaxed mb-8 border-l-2 border-white/10 pl-4">
-                  Next-generation ERP infrastructure for higher education. Streamlining student management, grading, and bursary operations.
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                  Next-generation ERP infrastructure for higher education. Streamlining student management, grading, and complex bursary operations.
                 </p>
-
-                <span class="inline-flex items-center text-sm font-bold text-gray-500 cursor-not-allowed">
-                  Deployment Pending <span class="ml-2 opacity-50">🔒</span>
-                </span>
+                <span class="text-[#3A86FF] text-sm font-bold flex items-center gap-2">Explore Architecture <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </div>
-          </article>
+          </a>
 
-          <article class="group relative bg-cortex-steel border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/30 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+          <a href="/ventures/urbis" class="group relative bg-[#0B132B] border border-white/5 rounded-2xl p-8 hover:border-[#3A86FF]/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden block">
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="font-space text-6xl font-bold text-white">03</span>
+            </div>
             <div class="relative z-10">
-                <div class="h-14 w-14 bg-[#3A86FF]/10 rounded-xl flex items-center justify-center mb-8 border border-[#3A86FF]/20 group-hover:bg-[#3A86FF]/20 transition-colors">
-                  <span class="font-space font-bold text-[#3A86FF] text-2xl">U</span>
-                </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-2">URBIS</h3>
+                <div class="h-12 w-12 bg-[#3A86FF]/10 rounded-lg flex items-center justify-center mb-8 border border-[#3A86FF]/20 text-[#3A86FF] font-bold">U</div>
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-[#3A86FF] transition-colors">URBIS</h3>
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-xs font-mono text-[#3A86FF] uppercase tracking-wider">PropTech Marketplace</span>
-                    <span class="h-px w-8 bg-white/10"></span>
-                    <span class="text-[10px] bg-[#3A86FF]/20 text-[#3A86FF] px-2 py-0.5 rounded border border-[#3A86FF]/20">BETA</span>
                 </div>
-                
-                <p class="text-gray-400 leading-relaxed mb-8 border-l-2 border-white/10 pl-4">
-                  A centralized marketplace for real estate, land, and hospitality. Digitizing land assets and simplifying transactions.
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                  A centralized marketplace for real estate, land, and hospitality. Bringing transparency and digital verification to civic land assets.
                 </p>
-
-                <span class="inline-flex items-center text-sm font-bold text-gray-500 cursor-not-allowed">
-                  Private Access Only <span class="ml-2 opacity-50">🔒</span>
-                </span>
+                <span class="text-[#3A86FF] text-sm font-bold flex items-center gap-2">Explore Architecture <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </div>
-          </article>
+          </a>
 
         </div>
       </div>
     </section>
 
-    <section id="manifesto" class="py-32 px-6 bg-cortex-navy relative overflow-hidden border-t border-white/5">
-        <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-20 items-center">
-            
-            <div class="space-y-8">
-                <h2 class="text-4xl md:text-5xl font-space font-bold text-white leading-tight">Why "Cortex"?</h2>
-                <div class="space-y-6 text-lg text-gray-400">
-                    <p>In anatomy, the <strong class="text-white">cortex</strong> is the outer layer of the brain responsible for higher thought, processing, and decision making.</p>
-                    <p>Cortex Guild acts as the digital processing layer for the city. We ingest the chaos of urban life—housing, education, information—and structure it into usable, efficient systems.</p>
+    <section class="py-24 px-6 border-t border-white/5 bg-[#050914]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-space font-bold text-white mb-6">Unified Architecture. <br/><span class="text-[#3A86FF]">Infinite Scale.</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        The true power of the Cortex ecosystem lies beneath the surface. By utilizing a centralized, highly secure database infrastructure and a unified design system, we launch institutional-grade platforms at a fraction of standard development times.
+                    </p>
+                    <ul class="space-y-4 font-mono text-sm text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#3A86FF]">❖</span> Centralized Component Library & UI Systems
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#3A86FF]">❖</span> Highly Scalable Serverless Infrastructure
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#3A86FF]">❖</span> Rapid Deployment Design Tokens
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="pt-8 flex items-center gap-4">
-                    <div class="h-16 w-16 rounded-full bg-gray-700 overflow-hidden border-2 border-[#3A86FF]/20 relative">
-                         <div class="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                            <span class="text-[8px] text-white/40">IMG</span>
-                         </div>
-                    </div>
-                    <div>
-                        <div class="text-white font-bold text-lg">Ridwan Awujoola</div>
-                        <div class="text-sm text-[#3A86FF] font-mono">CEO & Chief Architect</div>
-                    </div>
+                <div class="h-[300px] md:h-[400px] w-full border border-white/10 rounded-2xl bg-[#0B132B] flex items-center justify-center relative overflow-hidden shadow-xl mt-8 md:mt-0">
+                    <img 
+                      src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80" 
+                      alt="Server Architecture" 
+                      class="object-cover w-full h-full opacity-40 mix-blend-luminosity"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#050914] via-transparent to-[#050914]"></div>
                 </div>
             </div>
-
-            <div class="grid gap-4">
-                <div class="p-6 bg-cortex-steel border border-white/5 rounded-xl hover:bg-white/5 transition-colors">
-                    <div class="text-[#3A86FF] font-mono text-xs mb-2">01 // LOCAL FIRST</div>
-                    <h4 class="text-white font-bold text-lg">Context Aware</h4>
-                    <p class="text-sm text-gray-400 mt-2">We build specifically for the unique constraints of Tier-2 African cities.</p>
-                </div>
-                <div class="p-6 bg-cortex-steel border border-white/5 rounded-xl hover:bg-white/5 transition-colors">
-                    <div class="text-[#3A86FF] font-mono text-xs mb-2">02 // INSTITUTIONAL GRADE</div>
-                    <h4 class="text-white font-bold text-lg">High Stability</h4>
-                    <p class="text-sm text-gray-400 mt-2">Security, uptime, and trust are prioritized over "move fast and break things."</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section class="py-24 px-6 border-t border-white/5 bg-[#050914]">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="font-mono text-xs text-gray-500 uppercase tracking-[0.2em] mb-12">Backed by Strategic Partners</p>
-            
-            <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="h-12 w-32 border border-white/10 rounded flex items-center justify-center bg-white/5">
-                   <span class="text-[10px] font-bold text-white/30 tracking-widest">PARTNER 01</span>
+    <section id="manifesto" class="py-32 px-6 bg-cortex-navy relative overflow-hidden border-t border-white/5">
+        <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 max-w-3xl text-center">
+            <h2 class="text-4xl font-space font-bold text-white mb-8">The Cortex Manifesto</h2>
+            <div class="space-y-6 text-xl text-gray-400 font-light leading-relaxed mb-16">
+                <p>In anatomy, the <strong class="text-white">cortex</strong> is the outer layer of the brain responsible for higher thought, processing, and decision making.</p>
+                <p>We believe Tier-2 African cities require their own digital processing layer. We ingest the chaos of urban life—housing, education, information—and structure it into usable, highly efficient civic systems.</p>
+            </div>
+            <div class="inline-flex flex-col items-center justify-center text-center">
+                <div class="h-20 w-20 rounded-full bg-gray-700 overflow-hidden border-2 border-[#3A86FF] mb-4 relative shadow-[0_0_20px_rgba(58,134,255,0.2)]">
+                    <img src="https://res.cloudinary.com/urbis-grid/image/upload/v1771684030/Professional_Photo.jpg_imdx4q.jpg" alt="Ridwan Awujoola" class="w-full h-full object-cover" loading="lazy" />
                 </div>
-                <div class="h-12 w-32 border border-white/10 rounded flex items-center justify-center bg-white/5">
-                   <span class="text-[10px] font-bold text-white/30 tracking-widest">PARTNER 02</span>
-                </div>
-                <div class="h-12 w-32 border border-white/10 rounded flex items-center justify-center bg-white/5">
-                   <span class="text-[10px] font-bold text-white/30 tracking-widest">PARTNER 03</span>
-                </div>
+                <div class="text-white font-bold text-xl mb-1">Ridwan Awujoola</div>
+                <div class="text-sm text-[#3A86FF] font-mono tracking-widest uppercase">Chief Architect</div>
             </div>
         </div>
     </section>

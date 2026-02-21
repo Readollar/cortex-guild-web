@@ -1,0 +1,84 @@
+---
+// src/pages/terms.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+---
+
+<MainLayout title="CORTEX | Terms of Service">
+  <div class="bg-[#050914] min-h-screen text-gray-300 selection:bg-[#3A86FF] selection:text-white font-sans">
+    <Header />
+
+    <main class="pt-32 pb-16 px-6 border-b border-white/5 bg-[#0B132B]">
+      <div class="max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#050914] border border-white/10 text-xs font-mono text-[#3A86FF] mb-6 uppercase tracking-widest">
+            Legal & Compliance
+        </div>
+        <h1 class="text-4xl md:text-5xl font-space font-bold text-white mb-4">Terms of Service</h1>
+        <p class="text-gray-400 font-mono text-sm">Last Updated: February 2026</p>
+      </div>
+    </main>
+
+    <section class="py-16 px-6">
+      <div class="max-w-4xl mx-auto space-y-12 text-gray-400 leading-relaxed">
+        
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">1. Introduction</h2>
+            <p>
+                These Terms of Service ("Terms") govern your access to and use of the digital infrastructure, platforms, and services provided by <strong>Cortex Guild Ltd.</strong> ("Cortex", "we", "us", or "our"), including but not limited to OyoTimes, UniCore, and Urbis. By accessing our platforms, you agree to be bound by these Terms and our Privacy Policy.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">2. Enterprise & Platform Access</h2>
+            <p class="mb-4">
+                Cortex operates as a Civic Technology Venture Studio. Access to our subsidiary platforms is governed by specific user agreements:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>OyoTimes:</strong> General public access is permitted for media consumption. Event ticketing and digital wallet features require verified user registration.</li>
+                <li><strong>UniCore:</strong> Access is restricted to authorized personnel and enrolled students of partner educational institutions. Use is subject to the Master Service Agreement (MSA) signed with the respective institution.</li>
+                <li><strong>Urbis:</strong> Access requires strict Know Your Customer (KYC) verification. Cortex reserves the right to deny access to users who fail to meet compliance standards.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">3. Acceptable Use Policy</h2>
+            <p class="mb-4">You agree not to misuse the Cortex ecosystem. Specifically, you must not:</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Attempt to breach or circumvent the security mechanisms of any Cortex database or platform.</li>
+                <li>Use our platforms to transmit fraudulent data, particularly regarding real estate listings (Urbis) or academic records (UniCore).</li>
+                <li>Reverse-engineer, decompile, or extract proprietary source code from our unified architecture.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">4. Intellectual Property</h2>
+            <p>
+                All digital architecture, design systems, source code, logos (including the Cortex Hex-Core), and proprietary software are the exclusive property of Cortex Guild Ltd. You are granted a limited, non-exclusive license to use the platforms as intended by their specific commercial or civic functions.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">5. Limitation of Liability</h2>
+            <p>
+                To the maximum extent permitted by applicable law, Cortex Guild Ltd. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from (a) your access to or use of our platforms; (b) any unauthorized access to our secure servers.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-white mb-4 font-space">6. Governing Law & Jurisdiction</h2>
+            <p>
+                These Terms shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria. Any disputes arising from these Terms or the use of Cortex infrastructure shall be subject to the exclusive jurisdiction of the courts located in Oyo State, Nigeria.
+            </p>
+        </div>
+
+        <div class="pt-8 border-t border-white/5">
+            <p class="text-sm font-mono">For legal inquiries, contact: <a href="mailto:hello@cortexguild.com" class="text-[#3A86FF] hover:underline">hello@cortexguild.com</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</MainLayout>

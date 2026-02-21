@@ -1,0 +1,118 @@
+---
+// src/pages/contact.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+---
+
+<MainLayout title="CORTEX | Contact & Partner Access">
+  <div class="bg-cortex-navy min-h-screen text-cortex-light selection:bg-[#3A86FF] selection:text-white font-sans">
+    <Header />
+
+    <main class="relative pt-32 pb-16 px-6 overflow-hidden border-b border-white/5">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-cortex-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none opacity-50"></div>
+      
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B132B] border border-white/10 text-xs font-mono text-[#3A86FF] mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3A86FF] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3A86FF]"></span>
+            </span>
+            SECURE COMMS LINK
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-space font-bold tracking-tighter text-white mb-6">
+          Initiate <br/>
+          <span class="text-[#3A86FF]">Connection.</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl font-light leading-relaxed">
+          Whether you are an institution seeking infrastructure, an investor, or a civic partner, route your inquiry below.
+        </p>
+      </div>
+    </main>
+
+    <section class="py-24 px-6 bg-[#050914] relative z-10">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-16">
+            
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4 font-space">Cortex Guild HQ</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Oyo State, Nigeria<br/>
+                        Building the digital infrastructure for Africa's emerging cities.
+                    </p>
+                </div>
+
+                <div class="w-full h-px bg-white/10"></div>
+
+                <div class="space-y-6">
+                    <div>
+                        <div class="text-[10px] font-mono text-gray-500 tracking-widest uppercase mb-1">General Inquiries</div>
+                        <a href="mailto:hello@cortexguild.com" class="text-white font-medium hover:text-[#3A86FF] transition-colors text-lg">hello@cortexguild.com</a>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-mono text-gray-500 tracking-widest uppercase mb-1">Partnerships & Investors</div>
+                        <a href="mailto:partners@cortexguild.com" class="text-white font-medium hover:text-[#3A86FF] transition-colors text-lg">partners@cortexguild.com</a>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#0B132B] rounded-xl border border-white/5">
+                    <h4 class="text-white font-bold mb-2">Security & Compliance</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        All communications regarding proprietary infrastructure, UniCore deployments, and Urbis KYC standards are handled with strict institutional confidentiality.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <form class="bg-[#0B132B] border border-white/10 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#3A86FF] to-transparent opacity-50"></div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-gray-400 tracking-wider uppercase">Full Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full bg-[#050914] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#3A86FF] transition-colors placeholder-gray-600" required />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-gray-400 tracking-wider uppercase">Email Address</label>
+                            <input type="email" placeholder="john@institution.edu" class="w-full bg-[#050914] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#3A86FF] transition-colors placeholder-gray-600" required />
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-gray-400 tracking-wider uppercase">Organization / Institution</label>
+                            <input type="text" placeholder="e.g. University of Ibadan" class="w-full bg-[#050914] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#3A86FF] transition-colors placeholder-gray-600" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono text-gray-400 tracking-wider uppercase">Inquiry Type</label>
+                            <select class="w-full bg-[#050914] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#3A86FF] transition-colors appearance-none cursor-pointer">
+                                <option>General Inquiry</option>
+                                <option>Investor Relations</option>
+                                <option>UniCore: Institutional Pilot</option>
+                                <option>Urbis: Private Beta Access</option>
+                                <option>OyoTimes: Press / Media</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-8">
+                        <label class="text-xs font-mono text-gray-400 tracking-wider uppercase">Message</label>
+                        <textarea rows="5" placeholder="Detail your infrastructure needs or partnership proposal..." class="w-full bg-[#050914] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#3A86FF] transition-colors placeholder-gray-600 resize-none" required></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-[#3A86FF] text-[#0B132B] font-bold rounded-lg hover:bg-white transition-colors flex items-center justify-center gap-2 group">
+                        Transmit Protocol
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    
+                    <p class="text-center text-[10px] text-gray-500 mt-4 font-mono">End-to-end encrypted transmission.</p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <Footer />
+  </div>
+</MainLayout>
