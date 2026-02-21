@@ -1,5 +1,8 @@
 ---
 // src/components/common/Footer.astro
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.png'; // Your Main Cortex Logo
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -9,11 +12,13 @@ const currentYear = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
       
       <div class="lg:col-span-1">
-        <a href="/" class="flex items-center gap-3 mb-6">
-          <div class="relative w-6 h-6 flex items-center justify-center">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#3A86FF]">
-              <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" />
-            </svg>
+        <a href="/" class="flex items-center gap-3 mb-6 group">
+          <div class="relative w-6 h-6 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <Image 
+              src={logo} 
+              alt="Cortex Logo" 
+              class="w-full h-full object-contain" 
+            />
           </div>
           <span class="text-lg font-space font-bold tracking-widest text-white">CORTEX</span>
         </a>
@@ -51,7 +56,7 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-4 text-gray-400">
           <li><a href="/about" class="hover:text-[#3A86FF] transition-colors">The Company</a></li>
           <li><a href="/contact" class="hover:text-[#3A86FF] transition-colors">Partner Access</a></li>
-          <li><a href="#" class="hover:text-[#3A86FF] transition-colors">LinkedIn</a></li>
+          <li><a href="https://linkedin.com/company/cortex-guild" target="_blank" class="hover:text-[#3A86FF] transition-colors">LinkedIn</a></li>
         </ul>
       </div>
 
