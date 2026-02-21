@@ -90,48 +90,47 @@ import logo from '../../assets/logo.png'; // Your Main Cortex Logo
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
     </button>
   </div>
-
-  <div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0B132B]/95 backdrop-blur-2xl z-[100] translate-x-full transition-transform duration-300 md:hidden flex flex-col">
-    
-    <div class="px-6 h-20 flex items-center justify-between border-b border-white/5">
-        <span class="text-xl font-space font-bold tracking-widest text-white">MENU</span>
-        <button id="mobile-menu-close" class="text-white p-2 hover:text-[#3A86FF] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-    </div>
-
-    <div class="p-6 flex flex-col gap-8 flex-1 overflow-y-auto">
-        
-        <div>
-            <div class="text-xs font-mono text-gray-500 mb-4 tracking-widest">ECOSYSTEM</div>
-            <div class="flex flex-col gap-4">
-                <a href="/ventures/oyotimes" class="text-2xl font-bold text-white hover:text-red-500 transition-colors flex items-center justify-between">
-                    OyoTimes <span class="text-[10px] text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20 font-mono">LIVE</span>
-                </a>
-                <a href="/ventures/unicore" class="text-2xl font-bold text-white hover:text-yellow-500 transition-colors flex items-center justify-between">
-                    UniCore <span class="text-[10px] text-yellow-400 bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/20 font-mono">DEV</span>
-                </a>
-                <a href="/ventures/urbis" class="text-2xl font-bold text-white hover:text-[#3A86FF] transition-colors flex items-center justify-between">
-                    Urbis <span class="text-[10px] text-[#3A86FF] bg-[#3A86FF]/10 px-2 py-1 rounded border border-[#3A86FF]/20 font-mono">BETA</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="w-full h-px bg-white/5"></div>
-
-        <div class="flex flex-col gap-6">
-            <a href="/about" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Company</a>
-            <a href="/contact" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Contact</a>
-        </div>
-
-        <div class="mt-auto pt-8">
-            <a href="/contact" class="block w-full text-center py-4 bg-[#3A86FF] text-[#0B132B] font-bold rounded-lg hover:bg-white transition-colors">
-                Partner Access
-            </a>
-        </div>
-    </div>
-  </div>
 </header>
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0B132B]/95 backdrop-blur-2xl z-[100] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden flex flex-col">
+  
+  <div class="px-6 h-20 flex items-center justify-between border-b border-white/5">
+      <span class="text-xl font-space font-bold tracking-widest text-white">MENU</span>
+      <button id="mobile-menu-close" class="text-white p-2 hover:text-[#3A86FF] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+  </div>
+
+  <div class="p-6 flex flex-col gap-8 flex-1 overflow-y-auto">
+      
+      <div>
+          <div class="text-xs font-mono text-gray-500 mb-4 tracking-widest">ECOSYSTEM</div>
+          <div class="flex flex-col gap-4">
+              <a href="/ventures/oyotimes" class="text-xl font-bold text-white hover:text-red-500 transition-colors flex items-center justify-between">
+                  OyoTimes <span class="text-[10px] text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20 font-mono">LIVE</span>
+              </a>
+              <a href="/ventures/unicore" class="text-xl font-bold text-white hover:text-yellow-500 transition-colors flex items-center justify-between">
+                  UniCore <span class="text-[10px] text-yellow-400 bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/20 font-mono">DEV</span>
+              </a>
+              <a href="/ventures/urbis" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors flex items-center justify-between">
+                  Urbis <span class="text-[10px] text-[#3A86FF] bg-[#3A86FF]/10 px-2 py-1 rounded border border-[#3A86FF]/20 font-mono">BETA</span>
+              </a>
+          </div>
+      </div>
+
+      <div class="w-full h-px bg-white/5"></div>
+
+      <div class="flex flex-col gap-6">
+          <a href="/about" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Company</a>
+          <a href="/contact" class="text-xl font-bold text-white hover:text-[#3A86FF] transition-colors">Contact</a>
+      </div>
+
+      <div class="mt-auto pt-8">
+          <a href="/contact" class="block w-full text-center py-4 bg-[#3A86FF] text-[#0B132B] font-bold rounded-lg hover:bg-white transition-colors">
+              Partner Access
+          </a>
+      </div>
+  </div>
+</div>
 
 <script>
   const openBtn = document.getElementById('mobile-menu-open');
@@ -142,13 +141,15 @@ import logo from '../../assets/logo.png'; // Your Main Cortex Logo
   const mobileLinks = overlay?.querySelectorAll('a');
 
   function openMenu() {
-      overlay?.classList.remove('translate-x-full');
+      overlay?.classList.remove('opacity-0', 'pointer-events-none');
+      overlay?.classList.add('opacity-100', 'pointer-events-auto');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
   function closeMenu() {
-      overlay?.classList.add('translate-x-full');
-      document.body.style.overflow = 'auto'; // Re-enable background scrolling
+      overlay?.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay?.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = ''; // Re-enable background scrolling
   }
 
   if (openBtn) openBtn.addEventListener('click', openMenu);

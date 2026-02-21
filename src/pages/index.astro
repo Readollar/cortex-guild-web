@@ -5,20 +5,20 @@ import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
 ---
 
-<MainLayout title="CORTEX | Digital Systems, Civic Solutions">
+<MainLayout title="Cortex | Digital Systems, Civic Solutions">
   
   <div class="bg-cortex-navy min-h-screen text-cortex-light selection:bg-cortex-blue selection:text-white font-sans">
     <Header />
 
-    <main class="relative pt-32 pb-24 px-6 overflow-hidden">
+    <main class="relative pt-12 md:pt-20 pb-18 md:pb-24 px-6 overflow-hidden">
       <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-cortex-blue/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none opacity-50"></div>
       
       <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         
         <div class="text-left">
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-space font-bold tracking-tighter text-white mb-6 leading-[0.95]">
-            Digital Systems. <br />
-            <span class="text-[#3A86FF]">Civic Solutions.</span>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-space font-bold tracking-tighter text-white mb-6 leading-tight">
+            Digital Systems.
+            <span class="text-[#3A86FF] block mt-1">Civic Solutions.</span>
           </h1>
 
           <p class="text-lg text-gray-400 max-w-xl mb-10 leading-relaxed">
@@ -29,13 +29,13 @@ import Footer from '../components/common/Footer.astro';
             <a href="#ventures" class="w-full sm:w-auto px-8 py-4 bg-white text-[#0B132B] font-bold rounded-lg hover:bg-gray-100 transition-colors min-w-[180px] text-center">
               Explore the Ecosystem
             </a>
-            <a href="mailto:partners@cortexguild.com" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-colors min-w-[180px] text-center">
+            <a href="/contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-colors min-w-[180px] text-center">
                Partner With Us
             </a>
           </div>
         </div>
 
-        <div class="relative hidden lg:block h-[600px] w-full">
+        <div class="relative hidden lg:block h-[500px] w-full">
            <div class="absolute inset-0 bg-[#0B132B] rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
@@ -55,14 +55,14 @@ import Footer from '../components/common/Footer.astro';
                 Backed by & Trusted by
             </p>
             <div class="flex flex-wrap justify-center md:justify-end items-center gap-6 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 w-full mt-4 md:mt-0">
-                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INVESTOR / PARTNER 01 ]</span>
-                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INVESTOR / PARTNER 02 ]</span>
+                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INVESTOR ]</span>
+                <span class="text-[11px] font-bold text-white/50 tracking-widest">[ PARTNER]</span>
                 <span class="text-[11px] font-bold text-white/50 tracking-widest">[ INSTITUTIONAL CLIENT ]</span>
             </div>
         </div>
     </section>
 
-    <section id="ventures" class="py-32 px-6 bg-[#080e21]">
+    <section id="ventures" class="lg:py-32 py-20 px-6 bg-[#080e21]">
       <div class="max-w-7xl mx-auto">
         <div class="mb-20 md:flex items-end justify-between pb-8">
           <div class="max-w-2xl">
@@ -130,7 +130,7 @@ import Footer from '../components/common/Footer.astro';
 
     <section class="py-24 px-6 border-t border-white/5 bg-[#050914]">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
                 <div>
                     <h2 class="text-3xl font-space font-bold text-white mb-6">Unified Architecture. <br/><span class="text-[#3A86FF]">Infinite Scale.</span></h2>
                     <p class="text-gray-400 leading-relaxed mb-8">
@@ -161,21 +161,18 @@ import Footer from '../components/common/Footer.astro';
         </div>
     </section>
 
-    <section id="manifesto" class="py-32 px-6 bg-cortex-navy relative overflow-hidden border-t border-white/5">
+    <section id="manifesto" class="py-24 md:py-32 px-6 bg-cortex-navy relative overflow-hidden border-t border-white/5">
         <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10 max-w-3xl text-center">
-            <h2 class="text-4xl font-space font-bold text-white mb-8">The Cortex Manifesto</h2>
-            <div class="space-y-6 text-xl text-gray-400 font-light leading-relaxed mb-16">
+            <h2 class="text-3xl md:text-4xl font-space font-bold text-white mb-8">The Cortex Manifesto</h2>
+            <div class="space-y-2 md:space-y-6 text-xl text-gray-400 font-light leading-relaxed mb-16">
                 <p>In anatomy, the <strong class="text-white">cortex</strong> is the outer layer of the brain responsible for higher thought, processing, and decision making.</p>
-                <p>We believe Tier-2 African cities require their own digital processing layer. We ingest the chaos of urban life—housing, education, information—and structure it into usable, highly efficient civic systems.</p>
+                <p>We believe Tier-2 African cities require their own digital processing layer. We ingest the chaos of urban life - housing, education, information - and structure it into usable, highly efficient civic systems.</p>
             </div>
             <div class="inline-flex flex-col items-center justify-center text-center">
-                <div class="h-20 w-20 rounded-full bg-gray-700 overflow-hidden border-2 border-[#3A86FF] mb-4 relative shadow-[0_0_20px_rgba(58,134,255,0.2)]">
-                    <img src="https://res.cloudinary.com/urbis-grid/image/upload/v1771684030/Professional_Photo.jpg_imdx4q.jpg" alt="Ridwan Awujoola" class="w-full h-full object-cover" loading="lazy" />
-                </div>
                 <div class="text-white font-bold text-xl mb-1">Ridwan Awujoola</div>
-                <div class="text-sm text-[#3A86FF] font-mono tracking-widest uppercase">Chief Architect</div>
+                <div class="text-sm text-[#3A86FF] font-mono tracking-widest uppercase">Founder & CEO</div>
             </div>
         </div>
     </section>
